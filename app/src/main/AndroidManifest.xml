@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.xq.imageplugindemo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--要声明插件别名，需要在插件的AndroidManifest.xml中声明以下Meta-data：-->
+        <!--查看奇虎360的 RePlugin/replugin-sample/-->
+        <meta-data
+            android:name="com.qihoo360.plugin.name"
+            android:value="image"/>
+        <!--插件版本号-->
+        <meta-data
+            android:name="com.qihoo360.plugin.version.ver"
+            android:value="100"/>
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
